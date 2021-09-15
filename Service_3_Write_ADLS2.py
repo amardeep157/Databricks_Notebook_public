@@ -8,9 +8,9 @@
 # https://docs.microsoft.com/en-us/azure/storage/common/storage-auth-aad-app?tabs=dotnet#register-your-application-with-an-azure-ad-tenant
 # https://stackoverflow.com/questions/52769758/azure-blob-storage-authorization-permission-mismatch-error-for-get-request-wit# 
 # Use a service principal directly.
-TenantId_DirectoryId=dbutils.secrets.get(scope = "databricks_amar_secret_scope", key = "TenantId-DirectoryId") # a5add562-f78e-4ed6-afb6-5154ceb18f17
-clientId_PrincipalId=dbutils.secrets.get(scope = "databricks_amar_secret_scope", key = "clientId-PrincipalId") # 96cfb0b7-6288-441f-aa25-9bdfb7d93de6
-clientSecret=dbutils.secrets.get(scope = "databricks_amar_secret_scope", key = "clientSecret") # 8UFpYGS71a_QDHA5U_CJ9hgq7~.MBGq~Ox
+TenantId_DirectoryId=dbutils.secrets.get(scope = "databricks_amar_secret_scope", key = "TenantId-DirectoryId") # 
+clientId_PrincipalId=dbutils.secrets.get(scope = "databricks_amar_secret_scope", key = "clientId-PrincipalId") # 
+clientSecret=dbutils.secrets.get(scope = "databricks_amar_secret_scope", key = "clientSecret") # 
 
 spark.conf.set("fs.azure.account.auth.type.adls2amardeepstorage.dfs.core.windows.net", "OAuth")
 spark.conf.set("fs.azure.account.oauth.provider.type.adls2amardeepstorage.dfs.core.windows.net", "org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider")
